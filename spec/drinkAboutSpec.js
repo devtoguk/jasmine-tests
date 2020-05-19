@@ -13,5 +13,17 @@ describe("Drink About Game", function() {
             expect(whatCanIDrink(15)).toBe("Drink Coke");
         });
 
+        it("20 should return Drink Beer", function() {
+            expect(whatCanIDrink(20)).toBe("Drink Beer");
+        });
+
+        it("55 should return Drink Whisky", function() {
+            expect(whatCanIDrink(55)).toBe("Drink Whisky");
+        });
+
+        it("above 130 should return Sorry...", function() {
+            expect(whatCanIDrink(140)).toBe("Sorry. I can’t tell what drink because that age is incorrect!");
+        });
+
     });
 });
